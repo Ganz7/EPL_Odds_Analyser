@@ -14,5 +14,7 @@ def main():
 		print (row)
 
 
+	seasonStatsFile.close()
+
 if __name__ == '__main__':
 	main()
