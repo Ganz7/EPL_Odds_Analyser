@@ -4,17 +4,18 @@
 
 import csv
 
+from modules.CSVHandler import CSVHandlerClass
+
 
 def main():
 	
-	seasonStatsFile = open('data/csv/S13.csv','r')
-	reader = csv.reader(seasonStatsFile)
 
-	for row in reader:
-		print (row)
+	statsFile = CSVHandlerClass('data/csv/S13.csv')
 
+	results, odds = statsFile.returnResultsAndOdds()
 
-	seasonStatsFile.close()
+	statsFile.closeCSVFile()
+
 
 if __name__ == '__main__':
 	main()
