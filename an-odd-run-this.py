@@ -15,17 +15,23 @@ def main():
 	results, oddsList = statsFile.returnResultsAndOdds()
 	statsFile.closeCSVFile()
 
-	netChange = 0
+	netChangeOne = 0
+	netChangeTwo = 0
+
 	for result, odds in zip(results, oddsList):
 		resultWithHighestOdd = odds.index(max(odds))
+		resultWithLowestOdd = odds.index(min(odds))
 
 		if result == resultsDict[str(resultWithHighestOdd)]:
-			netChange = netChange + betAmount * float(max(odds))
-			#print (netChange)
+			netChangeOne = netChangeOne + betAmount * float(max(odds))
+			#print (max(odds), " - ", netChange)
 
+		elif result == resultsDict[str(resultWithLowestOdd)]:
+			netChangeTwo = netChangeTwo + betAmount * float(min(odds))
+			#print (max(odds), " - ", netChange)
 
-
-	print ("Net Change is -- ", netChange)
+	print ("Net Change is -- ", netChangeOne)
+	print ("Net Change is -- ", netChangeTwo)
 
 if __name__ == '__main__':
 	main()
