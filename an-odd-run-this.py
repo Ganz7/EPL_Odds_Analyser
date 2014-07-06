@@ -56,9 +56,10 @@ def main():
 				netChangeThree = netChangeThree + betAmount * float(secondLargest(odds))
 
 		print ("\n\nSeason ", season+1)
-		print ("If you bet on the highest odds, Gross revenue -- ", netChangeOne)
-		print ("If you bet on the lowest odds, Gross revenue -- ", netChangeTwo)
-		print ("If you bet on the second largest odds, Gross revenue -- ", netChangeThree)
+		print ("Gross Revenue when you bet on...")
+		print ("Highest odds -- ", netChangeOne)
+		print ("Lowest odds -- ", netChangeTwo)
+		print ("Second Highest odds -- ", netChangeThree)
 
 if __name__ == '__main__':
 	main()
