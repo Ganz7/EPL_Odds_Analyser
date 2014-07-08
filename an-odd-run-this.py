@@ -46,14 +46,13 @@ def main():
 
 			if result == resultsDict[str(resultWithHighestOdd)]:
 				netChangeOne = netChangeOne + betAmount * float(max(odds))
-				#print (max(odds), " - ", netChange)
 
 			elif result == resultsDict[str(resultWithLowestOdd)]:
 				netChangeTwo = netChangeTwo + betAmount * float(min(odds))
-				#print (max(odds), " - ", netChange)
 
 			else:
 				netChangeThree = netChangeThree + betAmount * float(secondLargest(odds))
+				
 
 		print ("\n\nSeason ", season+1)
 		print ("Gross Revenue when you bet on...")
